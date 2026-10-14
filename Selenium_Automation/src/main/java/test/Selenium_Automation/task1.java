@@ -22,9 +22,7 @@ public class task1 {
 		
 		driver.findElement(By.xpath("//input[@id ='male']")).click();
 		
-		// handling multiple webelements
-		
-		List
+		// handling multiple webelement 
 		
 	}
 }

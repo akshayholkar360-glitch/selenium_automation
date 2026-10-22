@@ -16,6 +16,6 @@ public class negativeusernametest {
 		driver.findElement(By.id("password")).sendKeys("Password123 ");
 		
 		driver.findElement(By.id("submit")).click();		
-	}
+		}
 
 }

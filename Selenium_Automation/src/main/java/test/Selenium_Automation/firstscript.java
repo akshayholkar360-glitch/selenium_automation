@@ -16,6 +16,6 @@ public static void main(String args[]) throws InterruptedException
 	driver.get("https://www.myntra.com/");
 	Thread.sleep(1000);
 	driver.close();
-}
+	}
 }  
  

@@ -23,5 +23,4 @@ public class invalidpassword {
 		
 		driver.findElement(By.id("submit")).click();
 	}
-
 }

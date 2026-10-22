@@ -141,6 +141,6 @@ public class task2 {
 
 		
 		
-	}
+}
 
 }

@@ -27,5 +27,5 @@ public class abc {
 		
 		driver.findElement(By.xpath("//button[@type ='button' and @id = 'register']")).click();
 
-}
+	}
 }

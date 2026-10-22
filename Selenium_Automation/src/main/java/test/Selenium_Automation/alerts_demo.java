@@ -66,6 +66,6 @@ public class alerts_demo {
 		
 		a5.dragAndDropBy(rs, 0, 80).build().perform();
 		
-	}
+}
 
 }

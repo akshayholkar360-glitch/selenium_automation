@@ -14,9 +14,8 @@ public class sliderevents {
 		driver.manage().window().maximize();
 		
 		driver.get("https://testautomationpractice.blogspot.com/");
-//		
+	
 //		WebElement ls= driver.findElement(By.xpath("//span[@style='left: 15%;']"));
-//		
 //		Actions ac=new Actions(driver);
 //		 ac.dragAndDropBy(ls, 10, 50).build().perform();
 	

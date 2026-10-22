@@ -22,5 +22,4 @@ public class frametask {
 		
 		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Akshay");
 	}
-
 }

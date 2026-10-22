@@ -17,5 +17,4 @@ public class dropdowndemo {
 		
 		sel.selectByVisibleText("India");
 	}
-
 }

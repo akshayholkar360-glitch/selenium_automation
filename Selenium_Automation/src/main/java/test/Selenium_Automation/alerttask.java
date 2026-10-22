@@ -230,38 +230,6 @@ public class alerttask {
 	        
 	        driver.close();
 	        
-	        
-
-	        
-
-	        
-
-			
-			
-
-			
-			
-
-
-	        
-	        
-
-
-			
-
-
-			
-			
-			
-			
-
-			
-			
-	        
-	     
-	        
-
-
 	}
 
 }

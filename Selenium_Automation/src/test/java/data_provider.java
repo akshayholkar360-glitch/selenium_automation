@@ -3,8 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.DataProvider;
 
-public class swaglablogin {
-  @Test(dataProvider = "data_provider")
+public class data_provider {
+  @Test(dataProvider = "data_providers")
   public void login_details(String user_name, String pass) throws InterruptedException {
 	  EdgeDriver driver=new EdgeDriver();
 	  driver.manage().window().maximize();
@@ -15,13 +15,17 @@ public class swaglablogin {
 	  Thread.sleep(1000);
 	  driver.findElement(By.id("login-button")).click();
 	  Thread.sleep(1000);
+	  driver.findElement(By.id("react-burger-menu-btn")).click();
+	  Thread.sleep(1000);
+	  driver.findElement(By.id("logout_sidebar_link")).click();
+	  driver.close();
 }
 
   @DataProvider
-  public Object[][] data_provider() {
+  public Object[][] data_providers() {
     return new Object[][] {
       new Object[] { "standard_user", "secret_sauce" },
-      new Object[] { "locked_out_user", "secret_sauce" },
+      new Object[] { "visual_user", "secret_sauce" },
       new Object[] { "problem_user", "secret_sauce" },
 
     };

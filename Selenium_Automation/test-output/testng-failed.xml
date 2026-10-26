@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="swaglablogin">
+      <class name="test_1.login_test">
         <methods>
-          <include name="login_details" invocation-numbers="1 2"/>
+          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- swaglablogin -->
+      </class> <!-- test_1.login_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

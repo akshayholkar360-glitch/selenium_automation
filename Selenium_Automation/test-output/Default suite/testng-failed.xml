@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test_1.login_test">
+      <class name="test.Selenium_Automation.external_fileread">
         <methods>
-          <include name="verifyLogin"/>
+          <include name="filereadtest"/>
         </methods>
-      </class> <!-- test_1.login_test -->
+      </class> <!-- test.Selenium_Automation.external_fileread -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

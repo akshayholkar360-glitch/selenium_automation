@@ -183,37 +183,42 @@ public class automation_task_ {
 		
 		// check box
 		
-		WebElement table = driver.findElement(By.xpath("//*[@id=\"productTable\"]"));
+		WebElement table = driver.findElement(By.xpath("//table[@id=\"productTable\"]"));
 
-		List<WebElement> boxes = table.findElements(By.xpath("//input[@type='checkbox']"));
+		List<WebElement> boxes = table.findElements(By.xpath("//table[@id='productTable']/tbody/tr[position()<=5]/td[4]/input"));
 
 		for (WebElement box : boxes) {
 		    if (!box.isSelected()) {
 		        box.click();
 		    }
+		   
 		}
 		
 		Thread.sleep(2000);
 		
 		// for next page 2
 		
-		WebElement next =driver.findElement(By.xpath("//*[@id=\"pagination\"]/li[2]/a"));
-		next.click();
+//		WebElement next =driver.findElement(By.xpath("//*[@id=\"pagination\"]/li[2]/a"));
+//		next.click();
+//		
+//		// for next table check box
+//		
+//		WebElement tablex = driver.findElement(By.xpath("//*[@id=\"productTable\"]"));
+//
+//		
+//		List<WebElement> box1 = tablex.findElements(By.xpath("//input[@type='checkbox']"));
+//		
+//		for (WebElement check : box1) {
+//			if(!check.isSelected()) {
+//				check.click();
+//			}
+//		}
+//		
+//		Thread.sleep(2000);
 		
-		// for next table check box
-		
-		WebElement tablex = driver.findElement(By.xpath("//*[@id=\"productTable\"]"));
-
-		
-		List<WebElement> box1 = tablex.findElements(By.xpath("//input[@type='checkbox']"));
-		
-		for (WebElement check : box1) {
-			if(!check.isSelected()) {
-				check.click();
-			}
-		}
-		
-		Thread.sleep(2000);
+		//*[@id="productTable"]/tbody/tr[1-4]/td[4]/input
+		//*[@id="productTable"]/tbody/tr[2]/td[4]/input
+		//input[@type='checkbox']
 		
 		
 		

@@ -30,7 +30,7 @@ public class testcase_without_TestNG {
 		driver.findElement(By.cssSelector("input[type='password']")).sendKeys("123456");
 	}
 	
-	static void pressbutton()
+	void pressbutton()
 	{
 		driver.findElement(By.id("enterbtn")).click();
 	}

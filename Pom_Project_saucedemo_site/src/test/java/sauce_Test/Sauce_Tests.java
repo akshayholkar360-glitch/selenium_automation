@@ -25,7 +25,7 @@ public class Sauce_Tests extends Sauce_Base {
 		Thread.sleep(1000);
 
 		page.open_menu();
-     	Thread.sleep(1000);
+		Thread.sleep(1000);
 
 		page.dynamic_catlog();
 		Thread.sleep(1000);
@@ -77,88 +77,98 @@ public class Sauce_Tests extends Sauce_Base {
 
 		page.remove_iteam();
 		Thread.sleep(1000);
-		
+
 		page.cart_enter();
 		Thread.sleep(2000);
-		
+
 		page.remove_cart();
 		Thread.sleep(1000);
-		
+
 		page.continue_shoping();
-		
+
 		page.add_backpack();
 		Thread.sleep(1000);
-		
+
 		page.cart_enter();
 		Thread.sleep(1000);
-		
+
 		page.check_out();
 		Thread.sleep(1000);
-		
+
 		page.checkout_name("Akshay");
 		Thread.sleep(1000);
-		
+
 		page.checkout_lastname("Holkar");
 		Thread.sleep(1000);
-		
+
 		page.postal_code("413504");
 		Thread.sleep(1000);
-		
+
 		page.cancle_checkout();
 		Thread.sleep(1000);
-		
+
 		page.check_out();
 		Thread.sleep(1000);
-		
+
 		page.checkout_name("Akshay");
 		Thread.sleep(1000);
-		
+
 		page.checkout_lastname("Holkar");
 		Thread.sleep(1000);
-		
+
 		page.postal_code("413504");
 		Thread.sleep(1000);
-		
+
 		page.continueto_checkout();
 		Thread.sleep(1000);
-		
+
 		page.cancle_overview();
 		Thread.sleep(1000);
-		
+
 		page.cart_enter();
 		Thread.sleep(1000);
-		
+
 		page.check_out();
 		Thread.sleep(1000);
-		
+
 		page.checkout_name("Akshay");
 		Thread.sleep(1000);
-		
+
 		page.checkout_lastname("Holkar");
 		Thread.sleep(1000);
-		
+
 		page.postal_code("413504");
 		Thread.sleep(1000);
-		
+
 		page.continueto_checkout();
 		Thread.sleep(1000);
-		
+
 		page.finish();
 		Thread.sleep(1000);
 
 		page.generate_pdf();
 		Thread.sleep(1000);
-		
+
 		String name = page.verify_pdf_downloaded();
 
 		System.out.println("PDF Name: " + name);
-		
+
 		page.back_home();
+		Thread.sleep(1000);
+
+
+		page.x_page();
+		Thread.sleep(1000);
+
+		page.facebook_page();
+		Thread.sleep(1000);
+
+		page.linkedin_page();
 		Thread.sleep(1000);
 		
 		page.open_menu();
-     	Thread.sleep(1000);
-     	
-     	page.log_out();
+		Thread.sleep(1000);
+
+		page.log_out();
 	}
 }

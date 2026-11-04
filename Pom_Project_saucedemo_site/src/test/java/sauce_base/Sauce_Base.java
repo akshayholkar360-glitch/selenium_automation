@@ -15,10 +15,10 @@ public class Sauce_Base {
 		d.get("https://www.saucedemo.com/");
 
 	}
+
 	@AfterMethod
-	public void closeDriver()
-	{
-		
+	public void closeDriver() {
+
 		d.close();
 	}
 }

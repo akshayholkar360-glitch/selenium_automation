@@ -6,6 +6,7 @@
       <class name="sauce_Test.Sauce_Tests">
         <methods>
           <include name="VerifyLogin"/>
+          <include name="closeDriver"/>
           <include name="setup"/>
         </methods>
       </class> <!-- sauce_Test.Sauce_Tests -->

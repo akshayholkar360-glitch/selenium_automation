@@ -1,6 +1,7 @@
 package sauce_pages;
 
 import java.io.File;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,22 +36,26 @@ public class Sauce_Pages {
 	By cart6 = By.id("add-to-cart-sauce-labs-onesie");
 	By remove_iteam1 = By.id("remove-test.allthethings()-t-shirt-(red)");
 	By remove_iteam2 = By.id("remove-sauce-labs-bike-light");
-	By Cart_enter =By.xpath("//a[@class='shopping_cart_link']");
+	By Cart_enter = By.xpath("//a[@class='shopping_cart_link']");
 	By remove_cart = By.id("remove-sauce-labs-backpack");
 	By Continue_shoping = By.id("continue-shopping");
 	By add_backpack = By.id("add-to-cart-sauce-labs-backpack");
 	By check_out = By.id("checkout");
 	By checkout_name = By.id("first-name");
 	By checkout_lastname = By.id("last-name");
-	By postal_code = By.id("postal-code"); 
+	By postal_code = By.id("postal-code");
 	By cancle = By.id("cancel");
 	By continueto_checkout = By.id("continue");
 	By cancle_overview = By.id("cancel");
 	By finish = By.id("finish");
 	By generate_pdf = By.id("generate-pdf-order");
 	By back_home = By.id("back-to-products");
-	By Log_out = By.id("logout_sidebar_link"); 
-	
+	By x_page = By.xpath("//a[@data-test='social-x']");
+	By facebook_page = By.xpath("//*[@id='page_wrapper']/footer/ul/li[2]/a");
+	By linkedin_page = By.xpath("//a[@data-test='social-linkedin' and @target='_blank']");
+	By Log_out = By.id("logout_sidebar_link");
+
+
 	public Sauce_Pages(WebDriver d) {
 		this.d = d;
 	}
@@ -140,79 +145,148 @@ public class Sauce_Pages {
 		d.findElement(remove_iteam1).click();
 		d.findElement(remove_iteam2).click();
 	}
-	
+
 	public void cart_enter() {
 		d.findElement(Cart_enter).click();
 	}
-	
+
 	public void remove_cart() {
 		d.findElement(remove_cart).click();
 	}
-	
+
 	public void continue_shoping() {
 		d.findElement(Continue_shoping).click();
 	}
-	
+
 	public void add_backpack() {
 		d.findElement(add_backpack).click();
 	}
-	
+
 	public void check_out() {
 		d.findElement(check_out).click();
 	}
-	
+
 	public void checkout_name(String name) {
-		d.findElement(checkout_name).sendKeys(name);;
+		d.findElement(checkout_name).sendKeys(name);
+		;
 	}
-	
+
 	public void checkout_lastname(String lastname) {
 		d.findElement(checkout_lastname).sendKeys(lastname);
 	}
+
 	public void postal_code(String code) {
 		d.findElement(postal_code).sendKeys(code);
 	}
+
 	public void cancle_checkout() {
 		d.findElement(cancle).click();
 	}
-	
+
 	public void continueto_checkout() {
 		d.findElement(continueto_checkout).click();
 	}
-	
+
 	public void cancle_overview() {
 		d.findElement(cancle_overview).click();
 	}
-	
+
 	public void finish() {
 		d.findElement(finish).click();
 	}
-	
+
 	public void generate_pdf() {
 		d.findElement(generate_pdf).click();
 	}
-	
+
 	public String verify_pdf_downloaded() {
 
-	    File folder = new File("C:\\Users\\aksha\\Downloads");
+		File folder = new File("C:\\Users\\aksha\\Downloads");
 
-	    File[] files = folder.listFiles();
+		File[] files = folder.listFiles();
 
-	    if (files != null) {
-	        for (File pdf : files) {
-	            if (pdf.getName().startsWith("swag-labs-order-")
-	                    && pdf.getName().endsWith(".pdf")) {
-	                return pdf.getName();
-	            }
+		if (files != null) {
+			for (File pdf : files) {
+				if (pdf.getName().startsWith("swag-labs-order-") && pdf.getName().endsWith(".pdf")) {
+					return pdf.getName();
+				}
+			}
+		}
+
+		return null;
+	}
+
+	public void back_home() throws InterruptedException {
+		d.findElement(back_home).click();
+		Thread.sleep(10000);
+	}
+
+	public void x_page() throws InterruptedException {
+				
+	    String mainTab = d.getWindowHandle();
+
+	    d.findElement(x_page).click();
+
+	    Thread.sleep(2000);
+
+	    Set<String> handles = d.getWindowHandles();
+
+	    for (String handle : handles) {
+	        if (!handle.equals(mainTab)) {
+	            d.switchTo().window(handle);
+	            d.close();
+	            break;
 	        }
 	    }
 
-	    return null;
+	    d.switchTo().window(mainTab);
+	}
+
+
+	public void facebook_page() throws InterruptedException {
+
+	    String mainTab = d.getWindowHandle();
+
+	    d.findElement(facebook_page).click();
+
+	    Thread.sleep(2000);
+
+	    Set<String> handles = d.getWindowHandles();
+
+	    for (String handle : handles) {
+	        if (!handle.equals(mainTab)) {
+	            d.switchTo().window(handle);
+	            d.close();
+	            break;
+	        }
+	    }
+
+	    d.switchTo().window(mainTab);
 	}
 	
-	public void back_home() {
-		d.findElement(back_home).click();
-	}
 	
+
+	public void linkedin_page() throws InterruptedException {
+
+	    String mainTab = d.getWindowHandle();
+
+	    d.findElement(linkedin_page).click();
+
+	    Thread.sleep(2000);
+
+	    Set<String> handles = d.getWindowHandles();
+
+	    for (String handle : handles) {
+	        if (!handle.equals(mainTab)) {
+	            d.switchTo().window(handle);
+	            d.close();
+	            break;
+	        }
+	    }
+
+	    d.switchTo().window(mainTab);
+	}
+
 	public void log_out() {
 		d.findElement(Log_out).click();
 	}

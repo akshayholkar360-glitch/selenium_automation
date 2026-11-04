@@ -64,7 +64,7 @@ public class alerts_demo {
 		
 		Actions a6=new Actions(driver);
 		
-		a5.dragAndDropBy(rs, 0, 80).build().perform();
+		a6.dragAndDropBy(rs, 0, 80).build().perform();
 		
 }
 
